@@ -29,7 +29,7 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0f;
+      background: #050505;
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -45,7 +45,7 @@
       transform: translateX(-50%);
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, #6C63FF20, transparent 70%);
+      background: radial-gradient(circle, #D4AF3715, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -67,27 +67,28 @@
       width: 100px;
       height: 100px;
       border-radius: 24px;
-      background: linear-gradient(135deg, #6C63FF, #4834d4);
+      background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+      border: 2px solid #D4AF37;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 16px;
       font-size: 48px;
-      box-shadow: 0 8px 32px #6C63FF40;
+      box-shadow: 0 8px 32px #D4AF3740;
     }
 
     .app-name {
       font-size: 28px;
       font-weight: 900;
       letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #fff, #ccc);
+      background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .app-tagline {
       font-size: 15px;
-      color: #8888aa;
+      color: #A89060;
       margin-top: 6px;
     }
 
@@ -102,8 +103,8 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      background: #14141f;
-      border: 1px solid #1e1e30;
+      background: #0e0e0e;
+      border: 1px solid #1a1a1a;
       border-radius: 14px;
       padding: 14px 16px;
       text-align: left;
@@ -120,20 +121,21 @@
       flex-shrink: 0;
     }
 
-    .fi-music { background: #6C63FF20; }
-    .fi-download { background: #00D47420; }
-    .fi-radio { background: #FF634720; }
+    .fi-music { background: #D4AF3720; }
+    .fi-download { background: #D4AF3720; }
+    .fi-radio { background: #D4AF3720; }
     .fi-free { background: #FFD70020; }
 
     .feature-text h3 {
       font-size: 14px;
       font-weight: 700;
+      color: #FFD700;
       margin-bottom: 2px;
     }
 
     .feature-text p {
       font-size: 12px;
-      color: #666680;
+      color: #777;
       line-height: 1.4;
     }
 
@@ -144,22 +146,22 @@
       gap: 10px;
       width: 100%;
       padding: 18px 24px;
-      background: linear-gradient(135deg, #6C63FF, #4834d4);
-      color: #fff;
+      background: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+      color: #000;
       border: none;
       border-radius: 16px;
       font-size: 18px;
       font-weight: 800;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 6px 24px #6C63FF50;
+      box-shadow: 0 6px 24px #D4AF3750;
       transition: transform 0.2s, box-shadow 0.2s;
       margin-bottom: 12px;
     }
 
     .download-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px #6C63FF60;
+      box-shadow: 0 8px 32px #D4AF3760;
     }
 
     .download-btn:active {
@@ -174,7 +176,7 @@
 
     .download-note {
       font-size: 12px;
-      color: #555570;
+      color: #555;
       margin-bottom: 32px;
       line-height: 1.5;
     }
@@ -193,12 +195,12 @@
     .stat-num {
       font-size: 24px;
       font-weight: 800;
-      color: #6C63FF;
+      color: #FFD700;
     }
 
     .stat-label {
       font-size: 11px;
-      color: #555570;
+      color: #555;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 2px;
@@ -207,26 +209,26 @@
     .footer {
       padding: 20px 0;
       font-size: 12px;
-      color: #333345;
+      color: #333;
     }
 
     .android-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #1a1a2e;
+      background: #111;
       padding: 8px 16px;
       border-radius: 10px;
       font-size: 13px;
-      color: #00D474;
+      color: #D4AF37;
       font-weight: 600;
       margin-bottom: 24px;
-      border: 1px solid #00D47430;
+      border: 1px solid #D4AF3730;
     }
 
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 6px 24px #6C63FF50; }
-      50% { box-shadow: 0 6px 32px #6C63FF80; }
+      0%, 100% { box-shadow: 0 6px 24px #D4AF3750; }
+      50% { box-shadow: 0 6px 32px #FFD70080; }
     }
 
     .download-btn { animation: pulse 2s ease-in-out infinite; }
@@ -243,7 +245,7 @@
     </div>
 
     <div class="android-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#00D474"><path d="M17.523 2.223l1.39-1.39a.5.5 0 00-.707-.707l-1.571 1.571A9.926 9.926 0 0012 .5a9.926 9.926 0 00-4.635 1.197L5.794.126a.5.5 0 00-.707.707l1.39 1.39A9.96 9.96 0 002 10h20a9.96 9.96 0 00-4.477-7.777zM8.5 7a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zM2 11v8a2 2 0 002 2h16a2 2 0 002-2v-8H2z"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M17.523 2.223l1.39-1.39a.5.5 0 00-.707-.707l-1.571 1.571A9.926 9.926 0 0012 .5a9.926 9.926 0 00-4.635 1.197L5.794.126a.5.5 0 00-.707.707l1.39 1.39A9.96 9.96 0 002 10h20a9.96 9.96 0 00-4.477-7.777zM8.5 7a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zM2 11v8a2 2 0 002 2h16a2 2 0 002-2v-8H2z"/></svg>
       Disponible para Android
     </div>
 
@@ -291,7 +293,7 @@
 
     <div class="stats">
       <div class="stat">
-        <div class="stat-num">∞</div>
+        <div class="stat-num">&infin;</div>
         <div class="stat-label">Canciones</div>
       </div>
       <div class="stat">
@@ -310,4 +312,3 @@
   </div>
 </body>
 </html>
-
