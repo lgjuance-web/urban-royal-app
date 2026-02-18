@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Royal Music - Descarga Gratis</title>
+
+  <!-- Open Graph for WhatsApp/Social Media previews -->
+  <meta property="og:title" content="Urban Royal Music - Tu Musica Sin Limites">
+  <meta property="og:description" content="Escucha musica gratis, sin anuncios. Reggaeton, salsa, bachata, pop y mas. Descarga ahora.">
+  <meta property="og:image" content="https://lgjuance-web.github.io/urban-royal-app/og-image.png">
+  <meta property="og:url" content="https://lgjuance-web.github.io/urban-royal-app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Urban Royal Music">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Urban Royal Music - Tu Musica Sin Limites">
+  <meta name="twitter:description" content="Escucha musica gratis, sin anuncios. Descarga la app ahora.">
+  <meta name="twitter:image" content="https://lgjuance-web.github.io/urban-royal-app/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #6C63FF20, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      width: 100%;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .logo-section {
+      margin-bottom: 32px;
+    }
+
+    .logo-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #6C63FF, #4834d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 48px;
+      box-shadow: 0 8px 32px #6C63FF40;
+    }
+
+    .app-name {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fff, #ccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .app-tagline {
+      font-size: 15px;
+      color: #8888aa;
+      margin-top: 6px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #14141f;
+      border: 1px solid #1e1e30;
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .fi-music { background: #6C63FF20; }
+    .fi-download { background: #00D47420; }
+    .fi-radio { background: #FF634720; }
+    .fi-free { background: #FFD70020; }
+
+    .feature-text h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .feature-text p {
+      font-size: 12px;
+      color: #666680;
+      line-height: 1.4;
+    }
+
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(135deg, #6C63FF, #4834d4);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 24px #6C63FF50;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 12px;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px #6C63FF60;
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .download-note {
+      font-size: 12px;
+      color: #555570;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: #6C63FF;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #555570;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .footer {
+      padding: 20px 0;
+      font-size: 12px;
+      color: #333345;
+    }
+
+    .android-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a1a2e;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: #00D474;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid #00D47430;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 6px 24px #6C63FF50; }
+      50% { box-shadow: 0 6px 32px #6C63FF80; }
+    }
+
+    .download-btn { animation: pulse 2s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="container">
+    <div class="logo-section">
+      <div class="logo-icon">🎵</div>
+      <h1 class="app-name">Urban Royal Music</h1>
+      <p class="app-tagline">Tu musica sin limites, gratis</p>
+    </div>
+
+    <div class="android-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#00D474"><path d="M17.523 2.223l1.39-1.39a.5.5 0 00-.707-.707l-1.571 1.571A9.926 9.926 0 0012 .5a9.926 9.926 0 00-4.635 1.197L5.794.126a.5.5 0 00-.707.707l1.39 1.39A9.96 9.96 0 002 10h20a9.96 9.96 0 00-4.477-7.777zM8.5 7a1 1 0 110-2 1 1 0 010 2zm7 0a1 1 0 110-2 1 1 0 010 2zM2 11v8a2 2 0 002 2h16a2 2 0 002-2v-8H2z"/></svg>
+      Disponible para Android
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon fi-music">🎶</div>
+        <div class="feature-text">
+          <h3>Musica ilimitada</h3>
+          <p>Reggaeton, salsa, bachata, pop, trap y mas</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon fi-download">📥</div>
+        <div class="feature-text">
+          <h3>Descarga y escucha offline</h3>
+          <p>Guarda tus canciones favoritas sin internet</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon fi-radio">📻</div>
+        <div class="feature-text">
+          <h3>Radio en vivo</h3>
+          <p>Miles de emisoras de Colombia y el mundo</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon fi-free">✨</div>
+        <div class="feature-text">
+          <h3>100% Gratis</h3>
+          <p>Sin suscripcion, sin limites de reproduccion</p>
+        </div>
+      </div>
+    </div>
+
+    <a id="downloadBtn" class="download-btn" href="https://expo.dev/artifacts/eas/g5jmMHonCEhdUa1v181Jjx.apk">
+      <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      Descargar APK Gratis
+    </a>
+
+    <p class="download-note">
+      Toca el boton y espera a que se descargue el archivo APK.
+      Luego abrelo para instalar la app. Si tu telefono pide permiso para instalar,
+      acepta y listo.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Canciones</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">Emisoras</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0$</div>
+        <div class="stat-label">Costo</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Urban Royal Music &copy; 2026
+    </div>
+  </div>
+</body>
+</html>
